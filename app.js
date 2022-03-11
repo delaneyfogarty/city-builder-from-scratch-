@@ -30,6 +30,7 @@ waterDropdown.addEventListener('change', () => {
   const waterSelect = waterDropdown.value;
   waterCount++;
   waterImgEl.style.background = `url(./assets/water-${waterSelect}.png)`;
+  displayStats();
 
 });
 
@@ -37,6 +38,7 @@ skylineDropdown.addEventListener('change', () => {
   const skylineSelect = skylineDropdown.value;
   skylineCount++;
   skylineImgEl.style.background = `url(./assets/skyline-${skylineSelect}.png)`;
+  displayStats();
 
 });
 
@@ -44,8 +46,13 @@ natureDropdown.addEventListener('change', () => {
   const natureSelect = natureDropdown.value;
   natureCount++;
   natureImgEl.style.background = `url(./assets/nature-${natureSelect}.png)`;
+  displayStats();
 
-})
+});
+
+function displayStats() {
+  countMessageEl.textContent = `You changed the water scene ${waterCount} times, the skyline scene ${skylineCount} times, and the nature scene ${natureCount} times.`;
+}
   // get user input
   // use user input to update state
   // update DOM to reflect the new state
