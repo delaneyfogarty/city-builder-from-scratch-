@@ -55,11 +55,22 @@ addSloganButton.addEventListener('click', () => {
   const sloganSelect = sloganInputEl.value;
   slogans.push(sloganSelect);
   sloganInputEl.value = '';
-
+  displaySlogans();
 })
 
 function displayStats() {
   countMessageEl.textContent = `You changed the water scene ${waterCount} times, the skyline scene ${skylineCount} times, and the nature scene ${natureCount} times.`;
+}
+function displaySlogans() {
+  sloganInputEl.textContent = '';
+  for (let slogan of slogans) {
+    const div = document.createElement('div');
+    div.classList.add('slogan');
+    div.textContent = slogan;
+    slogansEl.append(div);
+  }
+
+
 }
 
 
