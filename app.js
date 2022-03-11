@@ -1,6 +1,7 @@
 // import functions and grab DOM elements
-const cityNameInput = document.getElementById('city-name-input-container');
-const cityNameEl = document.getElementById('city-name-input');
+const cityNameInput = document.getElementById('city-name-input');
+const cityNameEl = document.getElementById('city-name-here');
+const cityInputButton = document.getElementById('city-button');
 
 const waterDropdown = document.getElementById('water-dropdown');
 const skylineDropdown = document.getElementById('skyline-dropdown');
@@ -9,10 +10,6 @@ const natureDropdown = document.getElementById('nature-dropdown');
 const waterImgEl = document.getElementById('water-images');
 const skylineImgEl = document.getElementById('skyline-images');
 const natureImgEl = document.getElementById('nature-images');
-
-const waterCountEl = document.getElementById('waterCount');
-const skylineCountEl = document.getElementById('skylineCount');
-const natureCountEl = document.getElementById('natureCount');
 
 const countMessageEl = document.getElementById('count-message');
 const addSloganButton = document.getElementById('slogan-button');
@@ -51,23 +48,30 @@ natureDropdown.addEventListener('change', () => {
 
 });
 
+cityInputButton.addEventListener('click', () => {
+  cityNameEl.textContent = cityNameInput.value;
+});
+
+
 cityNameInput.addEventListener('change', () => {
   const inputSelect = cityNameInput.value;
-  names.push(inputSelect);
+  inputSelect.push(cityNameInput);
   cityNameInput.value = '';
+  displayCityName();
 
+});
 
-})
 addSloganButton.addEventListener('click', () => {
   const sloganSelect = sloganInputEl.value;
   slogans.push(sloganSelect);
   sloganInputEl.value = '';
   displaySlogans();
-})
+});
 
 function displayStats() {
   countMessageEl.textContent = `You changed the water scene ${waterCount} times, the skyline scene ${skylineCount} times, and the nature scene ${natureCount} times.`;
 }
+
 function displaySlogans() {
   slogansEl.textContent = '';
   for (let slogan of slogans) {
@@ -76,10 +80,10 @@ function displaySlogans() {
     pTag.textContent = slogan;
     slogansEl.append(pTag);
   }
-
-
 }
-
+function displayCityName() {
+  cityNameEl.textContent = '';
+}
 
 
 
