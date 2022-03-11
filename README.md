@@ -1,4 +1,4 @@
-## The Golden Rule: 
+## The Golden Rule
 
 🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
 
@@ -6,21 +6,48 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 
 ## Making a plan
 
-1) **Make a drawing of your app. Simple "wireframes"** 
-1) **Look at the drawing and imagine using the app. What _state_ do you need to track?** 
+1) **Make a drawing of your app. Simple "wireframes"**
+1) **Look at the drawing and imagine using the app. What _state_ do you need to track?**
 1) **Once you have a drawing, name the HTML elements you'll need to realize your vision**
-1) **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")** 
+1) **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")**
 1) **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
 1) **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change? Does any DOM update?**
 1) **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
 1) **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
 
 Additional considerations:
+
 - Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
-- Consider your data model. 
-  - What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need? 
-  - What are the key/value pairs? 
-  - What arrays might you need? 
+- Consider your data model.
+  - What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need?
+  - What are the key/value pairs?
+  - What arrays might you need?
   - What needs to live in a persistence layer?
 - Is there some state we need to initialize?
 - Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+
+## My Plan
+
+1.) Create wire frame and plan.
+2.) Grab images of water, nature, and skyline for each dropdown.
+3.) Set up HTML elements...
+    - 3 IMG tags = to display images connected to a value on the dropdowns
+    waterImgEl.src = whatever image the user chooses
+    - 3 dropdowns = to know which img the user chose (water, nature, and skyline)
+    - City name input = to figure out wht the user typed for city name
+    'cityNameInput.value'
+    - div to hold the slogan = to show what slogan the user is typing
+    - 1 button = to know when to add slogan
+    - div = to hold welcome message
+    - div = to showcase how many times user changed each category (the counter)
+4.) Set State
+    -how many times water image changed
+    -how many times nature image  changed
+    -how many times skyline image changed
+    -list of slogans
+5.) Events!
+    A. User selects water image from dropdown = water count goes up and water image user selects appears
+    B. User selects skyline image from dropdown = skyline count goes up and skyline image user selects appears
+    C. User selects nature image from dropdown = nature count goes up and nature image user selects appears
+    D. User clicks the slogan button = slogan user typed in appears
+    E. User types city name into input = welcome element is updated with selected city name
