@@ -51,6 +51,13 @@ natureDropdown.addEventListener('change', () => {
 
 });
 
+cityNameInput.addEventListener('change', () => {
+  const inputSelect = cityNameInput.value;
+  names.push(inputSelect);
+  cityNameInput.value = '';
+
+
+})
 addSloganButton.addEventListener('click', () => {
   const sloganSelect = sloganInputEl.value;
   slogans.push(sloganSelect);
@@ -64,10 +71,10 @@ function displayStats() {
 function displaySlogans() {
   slogansEl.textContent = '';
   for (let slogan of slogans) {
-    const div = document.createElement('div');
-    div.classList.add('slogan');
-    div.textContent = slogan;
-    slogansEl.append(div);
+    const pTag = document.createElement('p');
+    pTag.classList.add('slogan');
+    pTag.textContent = slogan;
+    slogansEl.append(pTag);
   }
 
 
