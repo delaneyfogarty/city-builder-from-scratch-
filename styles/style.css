@@ -103,13 +103,23 @@ footer {
 }
 
 .main-section {
-    display: grid;
-    align-content: right;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    padding: 50px; 
+   display: grid;
+   grid-template-columns: 1fr 1fr 2fr;
 }
+.user-inputs > div {
+   height: 100%;
+   border: solid 1px black;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
 .user-inputs {
+    height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr; 
+    grid-template-rows: 1fr, 1fr;
+    grid-template-columns: 1fr, 1fr;
 }
+
+
