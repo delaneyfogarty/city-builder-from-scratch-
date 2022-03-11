@@ -17,6 +17,7 @@ const natureCountEl = document.getElementById('natureCount');
 const countMessageEl = document.getElementById('count-message');
 const addSloganButton = document.getElementById('slogan-button');
 const sloganInputEl = document.getElementById('slogan-input');
+const slogansEl = document.getElementById('slogans');
 
 // let state
 let waterCount = 0;
@@ -50,9 +51,20 @@ natureDropdown.addEventListener('change', () => {
 
 });
 
+addSloganButton.addEventListener('click', () => {
+  const sloganSelect = sloganInputEl.value;
+  slogans.push(sloganSelect);
+  sloganInputEl.value = '';
+
+})
+
 function displayStats() {
   countMessageEl.textContent = `You changed the water scene ${waterCount} times, the skyline scene ${skylineCount} times, and the nature scene ${natureCount} times.`;
 }
+
+
+
+
   // get user input
   // use user input to update state
   // update DOM to reflect the new state
