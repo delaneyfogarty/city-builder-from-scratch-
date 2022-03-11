@@ -37,8 +37,7 @@ Additional considerations:
     - City name input = to figure out wht the user typed for city name
     'cityNameInput.value'
     - div to hold the slogan = to show what slogan the user is typing
-    - 1 button = to know when to add slogan
-    - div = to hold welcome message
+    - 1 button = to know what the user typed as the city slogan
     - div = to showcase how many times user changed each category (the counter)
 4.) Set State
     -how many times water image changed
