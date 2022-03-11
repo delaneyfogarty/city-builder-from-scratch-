@@ -26,6 +26,26 @@ const slogans = [];
 
 
 // set event listeners 
+waterDropdown.addEventListener('change', () => {
+  const waterSelect = waterDropdown.value;
+  waterCount++;
+  waterImgEl.style.background = `url(./assets/water-${waterSelect}.png)`;
+
+});
+
+skylineDropdown.addEventListener('change', () => {
+  const skylineSelect = skylineDropdown.value;
+  skylineCount++;
+  skylineImgEl.style.background = `url(./assets/skyline-${skylineSelect}.png)`;
+
+});
+
+natureDropdown.addEventListener('change', () => {
+  const natureSelect = natureDropdown.value;
+  natureCount++;
+  natureImgEl.style.background = `url(./assets/nature-${natureSelect}.png)`;
+
+})
   // get user input
   // use user input to update state
   // update DOM to reflect the new state
