@@ -17,7 +17,7 @@ const natureCountEl = document.getElementById('natureCount');
 const countMessageEl = document.getElementById('count-message');
 const addSloganButton = document.getElementById('slogan-button');
 const sloganInputEl = document.getElementById('slogan-input');
-const slogansEl = document.getElementById('slogans');
+const slogansEl = document.getElementById('list');
 
 // let state
 let waterCount = 0;
@@ -62,7 +62,7 @@ function displayStats() {
   countMessageEl.textContent = `You changed the water scene ${waterCount} times, the skyline scene ${skylineCount} times, and the nature scene ${natureCount} times.`;
 }
 function displaySlogans() {
-  sloganInputEl.textContent = '';
+  slogansEl.textContent = '';
   for (let slogan of slogans) {
     const div = document.createElement('div');
     div.classList.add('slogan');
