@@ -23,31 +23,31 @@
             <img class="main-logo" src="./assets/alchemy-logo.png" />
             <div class="postcard-images">
                 <div class="water-images">
-                    <img src="./assets/water-1.jpg">
+                    <img id='water-images' src="./assets/water-1.jpg">
                 </div>
                 <div class="skyline-images">
-                    <img src="./assets/skyline-1.jpg">
+                    <img id='skyline-images' src="./assets/skyline-1.jpg">
                 </div>
                 <div class="nature-images">
-                    <img src="./assets/nature-1.jpg">
+                    <img id='nature-images' src="./assets/nature-1.jpg">
                 </div>
             </div>
             <div class="user-inputs">
                 <div class="dropdowns">
                     <select id="water-dropdown">
-                        <option value="water1">First Water Option</option>
-                        <option value="water2">Second Water Option</option>
-                        <option value="water3">Third Water Option</option>
+                        <option value="water-1">First Water Option</option>
+                        <option value="water-2">Second Water Option</option>
+                        <option value="water-3">Third Water Option</option>
                     </select>
                     <select id="skyline-dropdown">
-                        <option value="skyline1">First Skyline Option</option>
-                        <option value="skyline2">Second Skyline Option</option>
-                        <option value="skyline3">Third Skyline Option</option>
+                        <option value="skyline-1">First Skyline Option</option>
+                        <option value="skyline-2">Second Skyline Option</option>
+                        <option value="skyline-3">Third Skyline Option</option>
                     </select>
                     <select id="nature-dropdown">
-                        <option value="nature1">First Nature Option</option>
-                        <option value="nature2">Second Nature Option</option>
-                        <option value="nature3">Third Nature Option</option>
+                        <option value="nature-1">First Nature Option</option>
+                        <option value="nature-2">Second Nature Option</option>
+                        <option value="nature-3">Third Nature Option</option>
                     </select>
                 </div>
                 <div class="city-name-input-container">
@@ -65,7 +65,6 @@
             <div id="count-message">
                 <p> You changed your water scene <span id="waterCount"></span> times, your skyline scene <span
                         id="skylineCount"></span> times, and your nature scene <span id="natureCount"></span> times.
-                </p>
             </div>
         </section>
     </main>

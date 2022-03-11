@@ -29,7 +29,7 @@ const slogans = [];
 waterDropdown.addEventListener('change', () => {
   const waterSelect = waterDropdown.value;
   waterCount++;
-  waterImgEl.style.background = `url(./assets/water-${waterSelect}.png)`;
+  waterImgEl.src = `./assets/${waterSelect}.jpg`;
   displayStats();
 
 });
@@ -37,7 +37,7 @@ waterDropdown.addEventListener('change', () => {
 skylineDropdown.addEventListener('change', () => {
   const skylineSelect = skylineDropdown.value;
   skylineCount++;
-  skylineImgEl.style.background = `url(./assets/skyline-${skylineSelect}.png)`;
+  skylineImgEl.src = `./assets/${skylineSelect}.jpg`;
   displayStats();
 
 });
@@ -45,7 +45,7 @@ skylineDropdown.addEventListener('change', () => {
 natureDropdown.addEventListener('change', () => {
   const natureSelect = natureDropdown.value;
   natureCount++;
-  natureImgEl.style.background = `url(./assets/nature-${natureSelect}.png)`;
+  natureImgEl.src = `./assets/${natureSelect}.jpg`;
   displayStats();
 
 });
