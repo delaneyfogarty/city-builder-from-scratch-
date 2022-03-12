@@ -25,64 +25,64 @@ const slogans = [];
 
 // set event listeners 
 waterDropdown.addEventListener('change', () => {
-  const waterSelect = waterDropdown.value;
-  waterCount++;
-  waterImgEl.src = `./assets/${waterSelect}.jpg`;
-  displayStats();
+	const waterSelect = waterDropdown.value;
+	waterCount++;
+	waterImgEl.src = `./assets/${waterSelect}.jpg`;
+	displayStats();
 
 });
 
 skylineDropdown.addEventListener('change', () => {
-  const skylineSelect = skylineDropdown.value;
-  skylineCount++;
-  skylineImgEl.src = `./assets/${skylineSelect}.jpg`;
-  displayStats();
+	const skylineSelect = skylineDropdown.value;
+	skylineCount++;
+	skylineImgEl.src = `./assets/${skylineSelect}.jpg`;
+	displayStats();
 
 });
 
 natureDropdown.addEventListener('change', () => {
-  const natureSelect = natureDropdown.value;
-  natureCount++;
-  natureImgEl.src = `./assets/${natureSelect}.jpg`;
-  displayStats();
+	const natureSelect = natureDropdown.value;
+	natureCount++;
+	natureImgEl.src = `./assets/${natureSelect}.jpg`;
+	displayStats();
 
 });
 
 cityInputButton.addEventListener('click', () => {
-  cityNameEl.textContent = cityNameInput.value;
+	cityNameEl.textContent = cityNameInput.value;
 });
 
 
 cityNameInput.addEventListener('change', () => {
-  const inputSelect = cityNameInput.value;
-  inputSelect.push(cityNameInput);
-  cityNameInput.value = '';
-  displayCityName();
+	const inputSelect = cityNameInput.value;
+	inputSelect.push(cityNameInput);
+	cityNameInput.value = '';
+	displayCityName();
 
 });
 
 addSloganButton.addEventListener('click', () => {
-  const sloganSelect = sloganInputEl.value;
-  slogans.push(sloganSelect);
-  sloganInputEl.value = '';
-  displaySlogans();
+	const sloganSelect = sloganInputEl.value;
+	slogans.push(sloganSelect);
+	sloganInputEl.value = '';
+	displaySlogans();
 });
 
 function displayStats() {
-  countMessageEl.textContent = `You changed the water scene ${waterCount} times, the skyline scene ${skylineCount} times, and the nature scene ${natureCount} times.`;
+	countMessageEl.textContent = `You changed the water scene ${waterCount} times, the skyline scene ${skylineCount} times, and the nature scene ${natureCount} times.`;
 }
 
 function displaySlogans() {
-  slogansEl.textContent = '';
-  for (let slogan of slogans) {
-    const pTag = document.createElement('p');
-    pTag.classList.add('slogan');
-    pTag.textContent = slogan;
-    slogansEl.append(pTag);
-  }
+	slogansEl.textContent = '';
+	for (let slogan of slogans) {
+		const pTag = document.createElement('p');
+		pTag.classList.add('slogan');
+		pTag.textContent = slogan;
+		slogansEl.append(pTag);
+	}
 }
 function displayCityName() {
-  cityNameEl.textContent = '';
+	cityNameEl.textContent = '';
 }
 
 
