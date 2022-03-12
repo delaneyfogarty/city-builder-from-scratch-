@@ -18,48 +18,57 @@
             <img src="./assets/big-logo.png" />
         </div>
     </header>
+    <h1> Make your own postcard! </h1>
     <main>
         <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
-
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
+            <div class="postcard-images">
+                <div class="water-images">
+                    <img id='water-images' src="./assets/water-1.jpg">
+                </div>
+                <div class="skyline-images">
+                    <img id='skyline-images' src="./assets/skyline-1.jpg">
+                </div>
+                <div class="nature-images">
+                    <img id='nature-images' src="./assets/nature-1.jpg">
+                </div>
+                <div id="count-message">
+                    <p> You changed your water scene <span id="waterCount"></span> times, your skyline scene <span
+                            id="skylineCount"></span> times, and your nature scene <span id="natureCount"></span> times.
+                </div>
+            </div>
+            <div id="city-name-div">
+                <h1>Welcome To <span id='city-name-here'></span></h1>
+            </div>
+            <div class="user-inputs">
+                <div class="dropdowns">
+                    <select id="water-dropdown">
+                        <option value="water-1">First Water Option</option>
+                        <option value="water-2">Second Water Option</option>
+                        <option value="water-3">Third Water Option</option>
+                    </select>
+                    <select id="skyline-dropdown">
+                        <option value="skyline-1">First Skyline Option</option>
+                        <option value="skyline-2">Second Skyline Option</option>
+                        <option value="skyline-3">Third Skyline Option</option>
+                    </select>
+                    <select id="nature-dropdown">
+                        <option value="nature-1">First Nature Option</option>
+                        <option value="nature-2">Second Nature Option</option>
+                        <option value="nature-3">Third Nature Option</option>
+                    </select>
+                </div>
+                <div id="slogans">
+                    <label> New Slogan <input id="slogan-input" />
+                    </label>
+                    <button id="slogan-button">Add a slogan here!</button>
+                    <div id="list">
+                    </div>
+                </div>
+                <div>
+                    <input id="city-name-input">
+                    <button id="city-button">Add City Name!</button>
+                </div>
+            </div>
 
         </section>
     </main>
